@@ -1,6 +1,6 @@
 # Persona Primária
-NOME: Miguel dos Santos
-IDADE: 17 anos
+**NOME:** Miguel dos Santos
+**IDADE:** 17 anos
 
 ## QUEM
 | Pergunta | Resposta |
