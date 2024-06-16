@@ -1,4 +1,4 @@
-# Personas Primárias
+# Persona Primária
 **NOME:** Ana Clara Pereira
 **IDADE:** 29 anos
 
