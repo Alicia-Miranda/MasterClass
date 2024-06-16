@@ -1,6 +1,6 @@
 # Persona Secundária
-NOME: João Marcelo Costa
-IDADE: 45 anos
+**NOME:** João Marcelo Costa
+**IDADE:** 45 anos
 
 ## QUEM
 | Pergunta | Resposta |
