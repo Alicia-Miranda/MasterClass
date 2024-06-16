@@ -1,5 +1,4 @@
-# PERSONAS-PATHY
-## Personas Primárias
+# Personas Primárias
 NOME: Ana Clara Pereira
 IDADE: 29 anos
 
