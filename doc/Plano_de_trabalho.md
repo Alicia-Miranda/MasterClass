@@ -124,8 +124,8 @@ Conforme a equipe aprende através de pesquisas, também é possível fazer leit
 ## 3.4 Entregas de cada Fase 
 | Fase  | Mês | Entregável |
 | ----- | --- | ---------- |
-| I. Backlog do Produto  | | |
-| II.Especificação de Requisitos | Maio/Junho | Personas, Histórias do Usuário e Requisitos do sistema |
+| I. Especificação de Requisitos | Maio/Junho | Personas, User Storys, Criterios De Aceitação, Regras de Negócio, Elaboração do Plano De Trabalho |
+| II. Backlog do Produtor | | |
 | III. Inspeção |  | |
 | IV. Modelagem e Arquitetura  | | |
 | V. Design de Interface  | | |
