@@ -88,12 +88,13 @@ Conforme a equipe aprende através de pesquisas, também é possível fazer leit
 ## 3.2	Equipe de Projeto: Papéis e Responsabilidades dos integrantes 
 | Responsabilidade | Profissional |
 | ---------------- | ------------ |
-| Coordenação geral do projeto| Gerente De Projeto: Andrey Rodrigues |
-| Visão geral do que será desenvolvido | Product Owner(PO): Alicia Miranda |
-| Garantir que todas as etapas sejam seguidas corretamente | Scrum Master: Alicia Miranda, Carlos Victor, Clara Letícia, Clarissy, João Gabriel, Luis Rauber |
-| Componentes responsáveis pelo desenvolvimento do Back-end do sistema| Equipe de Desenvolvimento UX/UI: João Gabriel, Luis Rauber|
-| Componentes responsáveis pelo desenvolvimento do Front-end | Equipe de Design UX/UI: Alicia Miranda, Carlos Victor e Clara Letícia. |
-| Equipe de Testes | Realizações de testes e garantia de qualidade: João Gabriel, Clarissy, Carlos Victor e Clara Letícia. |
+| Gerente De Projeto | Andrey Rodrigues |
+| Product Owner(PO) | Alicia Miranda |
+| Scrum Master | Carlos Victor |
+| Desenvolvimento Back-end | João Gabriel e Luis Rauber|
+| Desenvolvimento Front-end | Alicia Miranda e Carlos victor |
+| Design UX/UI | Carlos Victor, Clara Letícia e Clarissy |
+| Equipe de Testes | João Gabriel, Clarissy, Carlos Victor e Clara Letícia |
 
 ## 3.3 Fases, Atividades e Cronograma 
 
@@ -104,7 +105,7 @@ Conforme a equipe aprende através de pesquisas, também é possível fazer leit
 - Elaboração do Plano De Trabalho.
 - Criação Das Personas.
   
-**Fase II: Backlog do Produtor :**  
+**Fase II: Backlog do Produto :**  
 - Avalição Das Histórias Do Usuário.
   
 **Fase III: Inspeção:**   
@@ -125,11 +126,11 @@ Conforme a equipe aprende através de pesquisas, também é possível fazer leit
 | Fase  | Mês | Entregável |
 | ----- | --- | ---------- |
 | I. Especificação de Requisitos | Maio/Junho | Personas, User Storys, Criterios De Aceitação, Regras de Negócio, Elaboração do Plano De Trabalho |
-| II. Backlog do Produtor | | |
-| III. Inspeção |  | |
-| IV. Modelagem e Arquitetura  | | |
-| V. Design de Interface  | | |
-| VI. Conlusão | | |
+| II. Backlog do Produto | Junho/Junho | Avalição Das Histórias Do Usuário |
+| III. Inspeção | | Correção Das Histórias Do Usuário |
+| IV. Modelagem e Arquitetura  | Julho/Julho | Elabora Do Modelo De Classes, Elaboração Do Modelo De Sequência e Elaboração Do Modelo C4 |
+| V. Design de Interface  | Julho/Julho | Elaboração da Interface (Telas) Do Sistema |
+| VI. Conlusão | Julho/Julho | Apresentação Final |
 
 ## 3.5 Controle de Mudanças 
 O monitoramento e controle do escopo do projeto serão realizados a partir das seguintes diretrizes:  
