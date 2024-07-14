@@ -96,21 +96,31 @@ Conforme a equipe aprende através de pesquisas, também é possível fazer leit
 | Equipe de Testes | Realizações de testes e garantia de qualidade: João Gabriel, Clarissy, Carlos Victor e Clara Letícia. |
 
 ## 3.3 Fases, Atividades e Cronograma 
-**Fase I: Backlog do Produto :**  
 
-**Fase II: Especificação de Requisitos – Maio/Junho:**
-- Requisitos funcionais. 
-- Requisitos não funcionais. 
+**Fase I: Especificação de Requisitos**
+- Histórias do Usuário.
+- Criterios De  Aceitação.
 - Regras de Negócio. 
-
-**Fase III: Inspeção :**   
-
-**Fase IV: Modelagem e Arquitetura :**
-
+- Elaboração do Plano De Trabalho.
+- Criação Das Personas.
+  
+**Fase II: Backlog do Produtor :**  
+- Avalição Das Histórias Do Usuário.
+  
+**Fase III: Inspeção:**   
+- Correção Das Histórias Do Usuário.
+  
+**Fase IV: Modelagem e Arquitetura:**
+- Elabora Do Modelo De Classes.
+- Elaboração Do Modelo De Sequência.
+- Elaboração Do Modelo C4.
+  
 **Fase V: Desing de Interface :**
- 
+- Elaboração da Interface (Telas) Do Sistema.
+   
 **Fase VI: Conclusão :**
-
+- Apresentação Final
+  
 ## 3.4 Entregas de cada Fase 
 | Fase  | Mês | Entregável |
 | ----- | --- | ---------- |
