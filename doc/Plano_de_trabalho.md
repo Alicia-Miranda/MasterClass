@@ -91,8 +91,8 @@ Conforme a equipe aprende através de pesquisas, também é possível fazer leit
 | Coordenação geral do projeto| Gerente De Projeto: Andrey Rodrigues |
 | Visão geral do que será desenvolvido | Product Owner(PO): Alicia Miranda |
 | Garantir que todas as etapas sejam seguidas corretamente | Scrum Master: Alicia Miranda, Carlos Victor, Clara Letícia, Clarissy, João Gabriel, Luis Rauber |
-| Componentes responsáveis pelo desenvolvimento do Back-end do sistema| Equipe de Desenvolvimento UI : João Gabriel, Luis Rauber|
-| Componentes responsáveis pelo desenvolvimento do Front-end | Equipe de Design UX: Alicia Miranda, Carlos Victor e Clara Letícia. |
+| Componentes responsáveis pelo desenvolvimento do Back-end do sistema| Equipe de Desenvolvimento UX/UI: João Gabriel, Luis Rauber|
+| Componentes responsáveis pelo desenvolvimento do Front-end | Equipe de Design UX/UI: Alicia Miranda, Carlos Victor e Clara Letícia. |
 | Equipe de Testes | Realizações de testes e garantia de qualidade: João Gabriel, Clarissy, Carlos Victor e Clara Letícia. |
 
 ## 3.3 Fases, Atividades e Cronograma 
