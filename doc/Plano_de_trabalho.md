@@ -83,7 +83,8 @@ Conforme a equipe aprende através de pesquisas, também é possível fazer leit
 ## 3.1	Estrutura do Projeto 
 - Gerente de Projeto  
 - Equipe de Desenvolvimento (Back-end) 
-- Equipe de Design (Front-end) 
+- Equipe de Design (Front-end)
+- Design UX/UI
 - Equipe de Testes 
 ## 3.2	Equipe de Projeto: Papéis e Responsabilidades dos integrantes 
 | Responsabilidade | Profissional |
