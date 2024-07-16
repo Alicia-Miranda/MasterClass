@@ -32,6 +32,9 @@ Desenvolvimento de um sistema que permite aos professores criar e compartilhar c
 | Enquadrabilidade | Detalhamento |
 | ---------------- | ------------ |
 | Aplicativo Educacional | Segue os bons costumes e os rendimentos de escolas e instituições, com o intuito de servi apenas para o ramo educacional. |
+| Conformidade Educacional | O QuizMasterClass será desenvolvido em conformidade com as normas e diretrizes educacionais nacionais e internacionais, assegurando que todo o conteúdo e as práticas pedagógicas atendam aos padrões estabelecidos por instituições de ensino. | 
+| Políticas de Privacidade e Segurança de Dados | O aplicativo será projetado e implementado em conformidade com a Lei Geral de Proteção de Dados (LGPD) brasileira, garantindo a proteção das informações pessoais de usuários, incluindo alunos e professores. Medidas de segurança, como criptografia de dados e autenticação de dois fatores, serão adotadas para proteger os dados contra acessos não autorizados e violações de segurança.| 
+| Acessibilidade Digital | O QuizMasterClass seguirá os padrões de acessibilidade digital (WCAG 2.1), garantindo que o aplicativo seja utilizável por pessoas com deficiência. Isso inclui a implementação de funcionalidades como navegação por teclado, suporte a leitores de tela, legendas em vídeos e opções de alto contraste para usuários com baixa visão. |
 
 ### 1.3.3 Tipo
 | Tipo | Detalhamento  |
