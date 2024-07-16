@@ -9,7 +9,8 @@
 # HISTÓRICO DE VERSÕES 
 | Versão  |Descrição| Autor | Data | 
 | ------- | ------- | ----- | ---- |
-| 1.0  | Elaboração do Plano de Trabalho | Alicia de Souza Miranda | 10/06/2024 |
+| 1.0 | Elaboração do Plano de Trabalho | Alicia de Souza Miranda | 10/06/2024 |
+| 1.1 | Atualização do Plano de Trabalho | Alicia de Souza Miranda | 13/07/2024 | 
 
 # 1. INTRODUÇÃO 
 ## 1.1 Objeto 
@@ -84,11 +85,19 @@ Conforme a equipe aprende através de pesquisas, também é possível fazer leit
 
 # 3. METODOLOGIA DE PROJETO 
 ## 3.1	Estrutura do Projeto 
-- Gerente de Projeto  
-- Equipe de Desenvolvimento (Back-end) 
-- Equipe de Design (Front-end)
-- Design UX/UI
-- Equipe de Testes 
+### Organização em Sprints 
+No contexto de um trabalho acadêmico na área de engenharia de software, organizamos o projeto em ciclos de desenvolvimento chamados sprints. Cada sprint tem uma duração variável, dependendo da complexidade das tarefas e funcionalidades a serem concluídas. As sprints nos ajudam a manter o foco e permitem a entrega contínua de incrementos do software, facilitando a avaliação progressiva do trabalho desenvolvido.
+### Revisões de Sprint
+Ao final de cada sprint, realizamos uma revisão de sprint. Durante essa reunião, apresentamos o que foi desenvolvido durante a sprint para os professores e colegas, recebendo feedback construtivo. A revisão de sprint é uma oportunidade para demonstrar o trabalho concluído e garantir que o desenvolvimento está alinhado com os objetivos acadêmicos e os requisitos do projeto.
+### Retrospectivas
+Após a revisão de sprint, realizamos uma retrospectiva. Nessa reunião, discutimos o que funcionou bem, o que não funcionou e o que pode ser melhorado no próximo ciclo. O objetivo é promover a melhoria contínua do processo de desenvolvimento, incentivando a reflexão crítica e a aprendizagem a partir das experiências do ciclo anterior.
+### Reuniões de Discussão, Validação e Correção de Requisitos
+Durante o projeto, realizamos reuniões específicas para a discussão, validação e correção de requisitos. Nessas reuniões, analisamos os requisitos do software, asseguramos que estão claros e completos, e fazemos ajustes necessários para refletir as necessidades do projeto acadêmico. Essas reuniões são essenciais para alinhar as expectativas e garantir a qualidade do trabalho final.
+### Reuniões Virtuais
+Além das reuniões presenciais, realizamos reuniões virtuais entre os membros da equipe, especialmente entre os dois responsáveis pelo repositório no GitHub. Essas reuniões são essenciais para a coordenação do trabalho, resolução de problemas técnicos e alinhamento das atividades de versionamento do código. A comunicação virtual facilita a colaboração, especialmente em contextos onde os membros da equipe podem ter horários ou locais diferentes.
+### Conclusão
+A estrutura do projeto descrita acima é projetada para assegurar que o desenvolvimento do software acadêmico seja eficiente, colaborativo e alinhado com os objetivos educacionais. Através de uma combinação de sprints, revisões, retrospectivas e outras reuniões específicas, conseguimos manter um fluxo de trabalho organizado e produtivo, promovendo a aprendizagem prática e a aplicação dos conceitos teóricos da engenharia de software.
+
 ## 3.2	Equipe de Projeto: Papéis e Responsabilidades dos integrantes 
 | Responsabilidade | Profissional |
 | ---------------- | ------------ |
@@ -131,10 +140,10 @@ Conforme a equipe aprende através de pesquisas, também é possível fazer leit
 | ----- | --- | ---------- |
 | I. Especificação de Requisitos | Maio/Junho | Personas, User Storys, Criterios De Aceitação, Regras de Negócio, Elaboração do Plano De Trabalho |
 | II. Backlog do Produto | Junho/Junho | Avalição Das Histórias Do Usuário |
-| III. Inspeção | | Correção Das Histórias Do Usuário |
+| III. Inspeção | Junho/Julho | Correção Das Histórias Do Usuário |
 | IV. Modelagem e Arquitetura  | Julho/Julho | Elabora Do Modelo De Classes, Elaboração Do Modelo De Sequência e Elaboração Do Modelo C4 |
 | V. Design de Interface  | Julho/Julho | Elaboração da Interface (Telas) Do Sistema |
-| VI. Conlusão | Julho/Julho | Apresentação Final |
+| VI. Conlusão | | Apresentação Final |
 
 ## 3.5 Controle de Mudanças 
 O monitoramento e controle do escopo do projeto serão realizados a partir das seguintes diretrizes:  
