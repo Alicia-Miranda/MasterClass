@@ -1,7 +1,7 @@
 # PLANO DE TRABALHO 
 | Nome do Projeto: | QuizMasterClass - App de cunho e-learning com Suporte a Vídeos e Quizzes  |
 | ---- | ---- |
-| Versão:   | 1.0   |
+| Versão:   | 1.1 |
 | Status:   | Em desenvolvimento  |
 | Executor Principal: | Alicia de Souza Miranda  |
 | Coordenador do Projeto: | Andrey Rodrigues |
