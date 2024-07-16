@@ -101,13 +101,12 @@ A estrutura do projeto descrita acima é projetada para assegurar que o desenvol
 ## 3.2	Equipe de Projeto: Papéis e Responsabilidades dos integrantes 
 | Responsabilidade | Profissional |
 | ---------------- | ------------ |
-| Gerente De Projeto | Andrey Rodrigues |
-| Product Owner(PO) | Alicia Miranda |
-| Scrum Master | Carlos Victor |
-| Desenvolvimento Back-end | João Gabriel e Luis Rauber|
+| Product Owner(PO) | Andrey Rodrigues |
+| Scrum Master | Alicia Miranda |
+| Desenvolvimento Back-end | João Gabriel e Luis Rauber | 
 | Desenvolvimento Front-end | Alicia Miranda e Carlos victor |
-| Design UX/UI | Carlos Victor, Clara Letícia e Clarissy |
-| Equipe de Testes | João Gabriel, Clarissy, Carlos Victor e Clara Letícia |
+| Design UX/UI | Carlos Victor, Clara Letícia e Ana Clarissy |
+| Equipe de Testes | João Gabriel, Ana Clarissy, Carlos Victor e Clara Letícia |
 
 ## 3.3 Fases, Atividades e Cronograma 
 
@@ -142,7 +141,7 @@ A estrutura do projeto descrita acima é projetada para assegurar que o desenvol
 | II. Backlog do Produto | Junho/Junho | Avalição Das Histórias Do Usuário |
 | III. Inspeção | Junho/Julho | Correção Das Histórias Do Usuário |
 | IV. Modelagem e Arquitetura  | Julho/Julho | Elabora Do Modelo De Classes, Elaboração Do Modelo De Sequência e Elaboração Do Modelo C4 |
-| V. Design de Interface  | Julho/Julho | Elaboração da Interface (Telas) Do Sistema |
+| V. Design de Interface | Julho/Julho | Elaboração da Interface (Telas) Do Sistema |
 | VI. Conlusão | | Apresentação Final |
 
 ## 3.5 Controle de Mudanças 
