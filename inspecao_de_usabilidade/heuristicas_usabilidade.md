@@ -11,4 +11,4 @@
 | 7  |Flexibilidade e Eficiência de Uso|O sistema deve fornecer atalhos, permitindo aos usuários experientes "cortar caminho" em ações frequentes.|
 | 8  |Estética e Design Minimalista|Os diálogos não devem conter informação irrelevante ou raramente necessária.|
 | 9  |Ajudar os Usuários a Reconhecer, Diagnosticar e Corrigir Erros|As mensagens de erro devem ser expressas em linguagem clara (sem códigos) indicando precisamente o problema e construtivamente sugerindo uma solução.|
-| 10 |Ajuda e documentação|É necessário prover ajuda e documentação embora seja melhor um sistema que possa ser usado sem documentação.|
+| 10 |Ajuda e Documentação|É necessário prover ajuda e documentação embora seja melhor um sistema que possa ser usado sem documentação.|
