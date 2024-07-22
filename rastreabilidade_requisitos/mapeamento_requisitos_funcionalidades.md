@@ -47,5 +47,3 @@
 
 Para a próxima etapa do relatório serão mostradas partes específicas do protótipo e faremos uma relação entre o frame e qual requisito a tela está atendendo, com explicação detalhada da funcionalidade.
 
-
-
