@@ -153,4 +153,3 @@ O monitoramento e controle do escopo do projeto serão realizados a partir das s
 - Todas as informações devem estar atualizadas no escopo e não-escopo. 
 - Nenhum trabalho fora do escopo do projeto deve ser feito. 
 - As solicitações de mudança no escopo do projeto devem ser efetivamente comunicadas e compreendidas.  
-
