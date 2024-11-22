@@ -7,7 +7,7 @@ export function cadastrarUsuario(email, password) {
             console.log('usuario cadastrado com sucesso:', userCredential.user);
         })
         .catch(error => {
-            console.error('erro ao cadastrar:', error.message);
+            console.error('erro ao cadastrar:', error.message, error.code);
         });
 }
 
@@ -17,16 +17,16 @@ export function loginUsuario(email, password) {
             console.log('usuário logado:', userCredential.user);
         })
         .catch(error => {
-            console.error('erro ao fazer login:', error.message);
+            console.error('erro ao fazer login:', error.message, error.code);
         })
 }
 
-export function logoutUser() {
+export function logoutUsuario() {
     return signOut(auth)
       .then(() => {
         console.log('Usuário deslogado');
       })
       .catch(error => {
-        console.error('Erro ao deslogar:', error.message);
+        console.error('Erro ao deslogar:', error.message, error.code);
       });
 }
