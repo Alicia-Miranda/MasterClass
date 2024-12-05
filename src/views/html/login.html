@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/sign.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <main class="container">
+    <aside class="container-side">
+      <div class="onclass-logo-name">
+        <img src="/src/views/assets/logo.png" alt="onClass">
+        <h1>OnClass</h1>
+      </div>
+    </aside>
+      
+    <section class="container-form">
+      <h2>Login</h2>
+      <form id="form-login" action="#" method="POST">
+        <input type="email" placeholder="Email" required>
+        <div id="input-password">
+            <input id="password" type="password" placeholder="Senha" required>
+            <button id="mostrar-senha" class="bnt-mostrar-senha" type="button">Mostrar</button>
+        </div>
+        <button type="submit" class="btn-submit">Entrar</button>
+      </form>
+      
+      <a class="esqueceu-senha" href="#">Esqueceu sua</a>
+      <a class="btn-sign" href="../html/cadastro.html">Criar nova conta</a>
+    </section>
+  </main>
+
+  <script type="module" src="../js/login.js"></script>
+</body>
+</html>

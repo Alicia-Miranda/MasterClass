@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/sign.css">
+  <title>Cadastro</title>
+</head>
+
+<body>
+  <main class="container">
+    <aside class="container-side">
+      <div class="onclass-logo-name">
+        <img src="../assets/logo.png" alt="onClass">
+        <h1>OnClass</h1>
+      </div>
+    </aside>
+    
+    <section class="container-form">
+      <h2>Realize seu cadastro</h2>
+      <form id="form-cadastro" action="../html/login.html" method="POST">
+        <input type="text" placeholder="Nome Completo" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Senha" required>
+        <button type="submit" class="btn-submit">Finalizar Cadastro</button>
+      </form>
+      
+      <p>Já possui uma conta?</p>
+      <a class="btn-sign" href="../html/login.html">Realizar Login</a>
+    </section>
+  </main>
+
+  <script type="module" src="../js/cadastro.js"></script>
+</body>
+</html>
