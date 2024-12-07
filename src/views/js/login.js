@@ -10,7 +10,6 @@ loginForm.addEventListener("submit", function (event) {
   authController.loginUsuario(email, password);
 });
 
-
 const togglePassword = document.getElementById("mostrar-senha");
 const passwordInput = document.getElementById("password");
 

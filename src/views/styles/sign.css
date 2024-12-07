@@ -1,0 +1,113 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f8fa; /* Fundo claro */
+    color: #28587b; /* Azul escuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Container principal */
+  .container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    color: #28587b; /* Azul escuro */
+    margin-bottom: 1rem;
+  }
+  
+  header img {
+    width: 100px;
+    margin-top: 1rem;
+  }
+  
+  /* Seção de usuário */
+  .class-usuario h3,
+  .class-login-cadastro h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: #28587b;
+  }
+  
+  /* Botões de seleção */
+  .bnt-perfil {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .bnt-perfil button {
+    background-color: #ffffff; /* Fundo branco */
+    color: #28587b; /* Azul escuro */
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid #28587b;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .bnt-perfil button:hover {
+    background-color: #28587b; /* Azul escuro */
+    color: #ffffff; /* Texto branco */
+  }
+  
+  /* Botões de login e cadastro */
+  .class-login-cadastro {
+    margin-top: 2rem;
+  }
+  
+  .class-login-cadastro a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #28587b; /* Azul escuro */
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .class-login-cadastro a:hover {
+    background-color: #1f4560; /* Azul mais escuro */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Estilização para os círculos de fundo */
+  body::before,
+  body::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  
+  body::before {
+    width: 250px;
+    height: 250px;
+    background-color: #f4d3d3; /* Rosa claro */
+    bottom: 10%;
+    left: 10%;
+  }
+  
+  body::after {
+    width: 350px;
+    height: 350px;
+    background-color: #e4e8ef; /* Azul claro */
+    top: 10%;
+    right: 10%;
+  }
+  
