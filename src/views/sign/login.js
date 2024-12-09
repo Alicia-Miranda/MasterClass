@@ -1,15 +1,40 @@
 import { authController } from '../../controllers/authController.js';
 
-const loginForm = document.getElementById("form-login");
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("form-login");
 
-loginForm.addEventListener("submit", function (event) {
-  event.preventDefault();
-  const email = event.target.email.value;
-  const password = event.target.password.value;
-  
-  authController.loginUsuario(email, password);
+  if (!loginForm) {
+    console.error("Formulário de login não encontrado!");
+    return;
+  }
+
+  loginForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    if (!emailInput || !passwordInput) {
+      console.error("Campos de e-mail ou senha não encontrados!");
+      return;
+    }
+
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+
+    if (!email || !password) {
+      alert("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    try {
+      await authController.loginUsuario(email, password);
+      alert("Login realizado com sucesso!");
+    } catch (error) {
+      alert(`Erro ao realizar login: ${error.message}`);
+    }
+  });
 });
-
 
 const togglePassword = document.getElementById("mostrar-senha");
 const passwordInput = document.getElementById("password");

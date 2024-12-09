@@ -7,7 +7,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
 import { doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
-const validarDados = (email, password) => {
+export const validarDados = (email, password) => {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) throw new Error("E-mail inválido.");
   if (password.length < 6) throw new Error("A senha deve ter pelo menos 6 caracteres.");

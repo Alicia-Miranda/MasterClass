@@ -1,4 +1,5 @@
 import { authController } from "../../controllers/authController.js"
+import { validarDados } from '../../models/authModel.js';
 
 const formCadastro = document.getElementById("form-cadastro");
 
@@ -11,8 +12,8 @@ formCadastro.addEventListener("submit", function (event) {
 
   authController.cadastrarUsuario(email, senha, nomeCompleto)
     .then(() => {
-      alert("Cadastro realizado com sucesso!");
-      formCadastro.reset(); // Limpa o formulário
+      formCadastro.reset();
+      window.location.href = "./login.html";
     })
     .catch((error) => {
       alert("Erro ao realizar o cadastro: " + error.message);

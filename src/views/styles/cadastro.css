@@ -102,6 +102,10 @@
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
   }
+
+  .bnt-voltar {
+    margin: 15px;
+  }
   
   .container-form form button:hover {
     background-color: #1f4560; /* Azul mais escuro */
@@ -121,16 +125,20 @@
     color: #28587b; /* Azul escuro */
   }
   
-  .container-form .btn-sign {
-    color: #ffffff;
-    background-color: #e4a5a5; /* Rosa claro */
-    padding: 0.8rem;
-    border-radius: 5px;
-    font-size: 1rem;
-    margin-top: 1.5rem;
-  }
-  
-  .container-form .btn-sign:hover {
-    background-color: #d98c8c; /* Rosa mais escuro */
-  }
+  .ja-possui-conta {
+    p {
+      margin-top: 60px;
+      color: #0C4876;
+    }
+    .btn-sign {
+      color: #ffffff;
+      background-color: #e4a5a5; /* Rosa claro */
+      padding: 0.8rem;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .btn-sign:hover {
+      background-color: #d98c8c; /* Rosa mais escuro */
+    }
+  } 
   
