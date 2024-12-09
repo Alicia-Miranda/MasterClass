@@ -1,33 +1,31 @@
 import { authModel } from "../models/authModel.js";
 
 export const authController = {
-  cadastrarUsuario: (email, password) => { // add nome completo
-    authModel.cadastrar(email, password)
-      .then(userCredential => {
-        console.log("Usuário cadastrado com sucesso:", userCredential.user);
-      })
-      .catch(error => {
-        console.error("Erro ao cadastrar:", error.message, error.code);
-      });
+  cadastrarUsuario: async (email, password, nomeCompleto) => {
+    try {
+      const { user, message } = await authModel.cadastrar(email, password, nomeCompleto);
+      console.log(message, user);
+    } catch (error) {
+      console.error("Erro ao cadastrar:", error.message);
+    }
+  },
+  
+
+  loginUsuario: async (email, password) => {
+    try {
+      const { user, message } = await authModel.login(email, password);
+      console.log(message, user);
+    } catch (error) {
+      console.error("Erro ao logar:", error.message);
+    }
   },
 
-  loginUsuario: (email, password) => {
-    authModel.login(email, password)
-      .then(userCredential => {
-        console.log("Usuário logado com sucesso:", userCredential.user);
-      })
-      .catch(error => {
-        console.error("Erro ao logar:", error.message, error.code);
-      });
-  },
-
-  logoutUsuario: () => {
-    authModel.logout()
-      .then(() => {
-        console.log("Usuário deslogado");
-      })
-      .catch(error => {
-        console.error("Erro ao deslogar:", error.message, error.code);
-      });
-  },
+  logoutUsuario: async () => {
+    try {
+      const { message } = await authModel.logout();
+      console.log(message);
+    } catch (error) {
+      console.error("Erro ao deslogar:", error.message);
+    }
+  }
 };

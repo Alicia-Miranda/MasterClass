@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles/sign.css">
+  <link rel="stylesheet" href="../styles/login.css">
   <title>Login</title>
 </head>
 
@@ -11,27 +11,30 @@
   <main class="container">
     <aside class="container-side">
       <div class="onclass-logo-name">
-        <img src="/src/views/assets/logo.png" alt="onClass">
+        <img src="/src/assets/logo.png" alt="onClass">
         <h1>OnClass</h1>
       </div>
     </aside>
+
+    <div class="bnt-voltar">
+      <a href="../inicio/index.html">Voltar</a>
+    </div>
       
     <section class="container-form">
       <h2>Login</h2>
-      <form id="form-login" action="#" method="POST">
+      <form id="form-login" method="POST">
         <input type="email" placeholder="Email" required>
         <div id="input-password">
-            <input id="password" type="password" placeholder="Senha" required>
-            <button id="mostrar-senha" class="bnt-mostrar-senha" type="button">Mostrar</button>
+          <input id="password" type="password" placeholder="Senha" required>        
         </div>
         <button type="submit" class="btn-submit">Entrar</button>
       </form>
       
-      <a class="esqueceu-senha" href="#">Esqueceu sua</a>
-      <a class="btn-sign" href="../html/cadastro.html">Criar nova conta</a>
+      <a class="esqueceu-senha" href="#">Esqueceu sua senha</a>
+      <a class="btn-sign" href="./cadastro.html">Criar nova conta</a>
     </section>
   </main>
 
-  <script type="module" src="../js/login.js"></script>
+  <script type="module" src="./login.js"></script>
 </body>
 </html>
