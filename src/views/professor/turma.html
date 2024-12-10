@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Professor - Turmas</title>
+  <link rel="stylesheet" href="#">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="navbar-logo">
+      <img src="../../assets/logo.png" alt="OnClass">
+      <span>Perfil do Professor</span>
+    </div>
+
+    <nav class="navbar-links">
+      <a href="./turma.html" class="active">Turmas</a>
+      <a href="./minhasAtividades.html">Minhas Atividades</a>
+    </nav>
+
+    <div class="navbar-user">
+      <button class="btn-sair">Sair</button>
+      <div class="user-info">
+        <span>nome-do-professor</span>
+        <img src="#" alt="Foto do usuário">
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="sem-turma">
+      <img src="#" alt="Sem turmas">
+      <h3>Ainda não há turmas...</h3>
+    </div>
+    
+    <section class="popup-criar-turma" id="popup-overlay">
+      <button class="btn-criar-turma">Criar Turma +</button>
+      <div class="popup">
+        <button class="btn-fechar" id="btn-fechar">X</button>
+        <h3>Criar Sala</h3>
+        <form id="form-criar-turma"> 
+          <label for="nome-turma">Nome da Turma</label>
+          <input type="text" id="nome-turma" name="nome-turma" required>
+          <label for="nome-disciplina">Nome da Disciplina</label>
+          <input type="text" id="nome-disciplina" name="nome-disciplina" required>
+
+          <button type="submit" class="btn-criar">Criar</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="turmas">
+      <div class="pesquisar-turma">
+        <input type="text" id="pesquisar-turma" placeholder="Pesquisar Turma">
+        <button id="btn-pesquisar"><i>🔍</i></button>
+      </div> 
+
+      <section class="turmas-container" id="turmas-container">
+        <!-- Turmas serão inseridas dinamicamente aqui -->
+      </section>
+    </section>
+  </main>
+
+  <script src="js/criarTurma.js"></script>
+  <script src="js/turmas.js"></script>
+</body>
+</html>

@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas Atividades</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Professor - Minhas Atividades</title>
+  <link rel="stylesheet" href="#">
 </head>
+
 <body>
-    <header class="header-principal">
-        <div class="logo-sistema">
-            <img src="/src/assets/logo.png" alt="OnClass">
-            <h2>OnClass</h2>
-            <h3>Perfil do Professor</h3>
+    <header class="navbar">
+        <div class="navbar-logo">
+          <img src="../../assets/logo.png" alt="OnClass Logo">
+          <span>Perfil do Professor</span>
         </div>
-        <div class="perfil">
-            <h3 id="nome-professor">Nome do Professor</h3>
-            <img src="https://via.placeholder.com/40" alt="perfil">
-            <div class="bnt-logout">
-                <button id="bnt-logout">Sair</button>
-            </div>
-        </div>
-        <nav class="header">
-            <a href="../turmas/turmas.html">Turmas</a>
-            <a href="./minhasAtividades.html">Minhas Atividades</a>
+
+        <nav class="navbar-links">
+          <a href="./turma.html" class="active">Turmas</a>
+          <a href="./minhasAtividades.html">Minhas Atividades</a>
         </nav>
+
+        <div class="navbar-user">
+          <button class="btn-sair">Sair</button>
+          <div class="user-info">
+            <span>nome-do-professor</span>
+            <img src="#" alt="Foto do usuário">
+          </div>
+        </div>
     </header>
 
-    <main class="container">
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Pesquisar Atividade"
-            />
-            <button id="search-button">Pesquisar</button>
+  <main class="container">
+    <section class="sem-atividades">
+        <img src="#" alt="Sem atividades registradas">
+        <h3>Ainda não há atividades registradas...</h3>
+    </section>
+
+    <section class="atividades">
+        <div class="pesquisar">
+            <input type="text" id="pesquisar-atividade" placeholder="Pesquisar Atividade">
+            <button id="btn-pesquisar"><i>🔍</i></button>
         </div>
-    </main>
+        
+        <section class="atividades-container" id="atividades-container">
+            <!-- Turmas serão inseridas dinamicamente aqui -->
+        </section>
+    </section>
+  </main>
+
+  <script src="js/buscarAtividade.js"></script>
 </body>
 </html>
