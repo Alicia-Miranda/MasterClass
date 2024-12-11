@@ -1,4 +1,5 @@
 import { authService } from "../../../controllers/authService.js";
+import { turmaRenderer } from "../js/turmaRenderer.js";
 import { domUtils } from "./domUtils.js";
 
 export const turmaHandlers = {

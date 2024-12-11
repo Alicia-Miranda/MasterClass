@@ -75,4 +75,70 @@
   .btn-criar:hover {
     background-color: #45a049;
   }
+
+  .turma-card {
+    background-color: #f9f9f9; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .turma-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .turma-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .turma-info {
+    text-align: left;
+  }
+  
+  .turma-nome {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  .turma-detalhe {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0 0;
+  }
+  
+  .turma-icone {
+    font-size: 2rem;
+    color: #aaa;
+  }
+  
+  .folder-icon {
+    font-size: 2rem;
+  }
+  
+  .ver-tudo-btn {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    color: #888;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .ver-tudo-btn:hover {
+    color: #555;
+  }
+  
   

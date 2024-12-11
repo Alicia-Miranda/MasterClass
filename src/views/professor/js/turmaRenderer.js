@@ -7,9 +7,16 @@ export const turmaRenderer = {
     turmaDiv.classList.add("turma-card");
 
     turmaDiv.innerHTML = `
-      <h3>${turma.nome}</h3>
-      <p>Disciplina: ${turma.disciplina}</p>
-      <button class="btn-excluir-turma" data-id="${turma.id}">Excluir</button>
+      <div class="turma-content">
+        <div class="turma-info">
+          <h3 class="turma-nome">${turma.nome}</h3>
+          <p class="turma-detalhe">Turma: ${turma.disciplina}</p>
+        </div>
+        <div class="turma-icone">
+          <i class="folder-icon">📁</i>
+        </div>
+      </div>
+      <a class="ver-tudo-btn" href="../professor/sala.html">Ver tudo</a>
     `;
 
     container.appendChild(turmaDiv);

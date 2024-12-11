@@ -18,7 +18,7 @@ export const turmaService = {
       }
     } catch (error) {
       console.error("Erro ao carregar turmas:", error);
-      domUtils.showMessage(`Erro ao carregar turmas: ${error.message}`, "error");
+      //domUtils.showMessage(`Erro ao carregar turmas: ${error.message}`, "error");
     }
   },
 };

@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilização geral do navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #073b65;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Logo e título */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .navbar-logo span {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Navegação */
+  .navbar-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-links a.active,
+  .navbar-links a:hover {
+    background-color: #055385;
+  }
+  
+  /* Usuário e botão de sair */
+  .navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .user-info {
+    font-size: 16px;
+  }
+  
+  .btn-sair {
+    padding: 8px 16px;
+    background-color: #032947;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-sair:hover {
+    background-color: #055385;
+  }
+  
