@@ -1,21 +1,25 @@
-import { authController } from "../../controllers/authController.js"
-import { validarDados } from '../../models/authModel.js';
+import { userController } from "../../controllers/userController.js";
 
-const formCadastro = document.getElementById("form-cadastro");
+const form = document.querySelector("#form-cadastro");
 
-formCadastro.addEventListener("submit", function (event) {
+form.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const nomeCompleto = document.getElementById("nomeCompleto").value;
-  const email = document.getElementById("email").value;
-  const senha = document.getElementById("password").value;
+  const nomeCompleto = form.nomeCompleto.value.trim();
+  const email = form.email.value.trim();
+  const password = form.password.value.trim();
+  const tipoUsuario = form.tipoUsuario.value;
 
-  authController.cadastrarUsuario(email, senha, nomeCompleto)
-    .then(() => {
-      formCadastro.reset();
-      window.location.href = "./login.html";
-    })
-    .catch((error) => {
-      alert("Erro ao realizar o cadastro: " + error.message);
-    });
+  if (!tipoUsuario) {
+    alert("Por favor, selecione um tipo de usuário.");
+    return;
+  }
+
+  try {
+    const response = await userController.cadastrarUsuario(email, password, nomeCompleto, tipoUsuario);
+    alert(response.message);
+    window.location.href = "./login.html"; // Redireciona para a página de login após o sucesso
+  } catch (error) {
+    alert(error.message);
+  }
 });

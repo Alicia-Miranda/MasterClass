@@ -1,11 +1,10 @@
-import { auth, db } from "./firebase.js";
+ import { auth } from "./firebase.js";
 import { 
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword, 
   signOut, 
   updateProfile 
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js";
-import { doc, setDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
 export const validarDados = (email, password) => {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -21,17 +20,10 @@ export const authModel = {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
+      // Atualiza o perfil do usuário com o nome completo
       await updateProfile(user, { displayName: nomeCompleto });
 
-      // cria coleção para novo user ou so add user na coleção
-      const userDocRef = doc(db, "usuarios", user.uid);
-      await setDoc(userDocRef, {
-        nome: nomeCompleto,
-        email: email,
-        criadoEm: new Date(),
-      });
-
-      return { user, message: `Usuário cadastrado com sucesso.` };
+      return { user, message: "Usuário cadastrado com sucesso." };
     } catch (error) {
       console.error("Erro ao cadastrar usuário:", error);
       throw new Error(error.message || "Erro ao cadastrar usuário. Tente novamente.");
@@ -58,5 +50,5 @@ export const authModel = {
       console.error("Erro ao deslogar:", error);
       throw new Error(error.message || "Erro ao deslogar. Tente novamente.");
     }
-  }
+  },
 };

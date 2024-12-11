@@ -1,5 +1,3 @@
-// falta implementar no banco de dados
-
 import { carregarTurmas } from "../../../controllers/dbTurmasController" 
 
 const popupOverlay = document.getElementById("popup-overlay");

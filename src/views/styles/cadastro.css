@@ -140,5 +140,22 @@
     .btn-sign:hover {
       background-color: #d98c8c; /* Rosa mais escuro */
     }
-  } 
+  }
+
+  select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #6200ea; /* Ajuste para a cor roxa conforme preferência */
+    box-shadow: 0 0 5px rgba(98, 0, 234, 0.5);
+  }
+  
   
