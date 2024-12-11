@@ -127,8 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
       await carregarTurmas();
     } else {
       console.error("Erro: Nenhum usuário autenticado.");
-      alert("Você precisa estar logado para acessar esta página.");
-      window.location.href = "/src/views/login.html"; // Redireciona para login se não estiver autenticado
+      //alert("Você precisa estar logado para acessar esta página.");
+      //window.location.href = "/src/views/login.html"; // Redireciona para login se não estiver autenticado
     }
   });
 });
