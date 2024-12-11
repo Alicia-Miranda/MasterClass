@@ -32,7 +32,7 @@ export const authModel = {
 
   login: async (email, password) => {
     try {
-      validarDados(email, password); // Validação dos dados
+      validarDados(email, password);
 
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       return { user: userCredential.user, message: "Login realizado com sucesso." };

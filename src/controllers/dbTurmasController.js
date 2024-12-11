@@ -1,3 +1,5 @@
+// meu deus, isso não ta certo...
+
 import { getDocs, collection, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js";
 import { db } from "../../../firebaseConfig.js";
 

@@ -1,47 +1,66 @@
-import { authController } from '../../controllers/authController.js';
+import { authModel } from "../../models/authModel.js";
+import { firestoreModel } from "../../models/firestoreModel.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  const loginForm = document.getElementById("form-login");
+// Lidar com o botão de mostrar/esconder senha
+const btnMostrarSenha = document.getElementById("mostrar-senha");
+const inputPassword = document.getElementById("password");
 
-  if (!loginForm) {
-    console.error("Formulário de login não encontrado!");
+btnMostrarSenha.addEventListener("click", () => {
+  const tipo = inputPassword.type === "password" ? "text" : "password";
+  inputPassword.type = tipo;
+  btnMostrarSenha.textContent = tipo === "password" ? "Mostrar" : "Esconder";
+});
+
+// Captura o formulário
+const form = document.getElementById("form-login");
+
+function mostrarNotificacao(mensagem, tipo = "sucesso") {
+  const notificacao = document.getElementById("notificacao");
+
+  notificacao.textContent = mensagem;
+  notificacao.className = `notificacao ${tipo === "erro" ? "erro" : ""}`;
+
+  notificacao.style.display = "block";
+
+  setTimeout(() => {
+    notificacao.style.display = "none";
+  }, 4000);
+};
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault(); // Evita o recarregamento da página
+
+  const email = form.email.value.trim();
+  const password = form.password.value.trim();
+
+  if (!email || !password) {
+    mostrarNotificacao("Por favor, preencha todos os campos.", "erro");
     return;
   }
 
-  loginForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  try {
+    // Realiza login com o Firebase Authentication
+    const { user } = await authModel.login(email, password);
 
-    const emailInput = document.getElementById("email");
-    const passwordInput = document.getElementById("password");
+    // Busca o tipo de usuário no Firestore
+    const usuarioFirestore = await firestoreModel.buscarUsuario(user.uid);
+    const tipoUsuario = usuarioFirestore.tipoUsuario;
 
-    if (!emailInput || !passwordInput) {
-      console.error("Campos de e-mail ou senha não encontrados!");
+    if (!tipoUsuario) {
+      mostrarNotificacao("Tipo de usuário não identificado.", "erro");
       return;
     }
 
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
-
-    if (!email || !password) {
-      alert("Por favor, preencha todos os campos.");
-      return;
+    // Redireciona com base no tipo de usuário
+    if (tipoUsuario === "professor") {
+      window.location.href = "/src/views/professor/turma.html";
+    } else if (tipoUsuario === "aluno") {
+      window.location.href = "../aluno/dashboard.html";
+    } else {
+      mostrarNotificacao("Tipo de usuário inválido.", "erro");
     }
-
-    try {
-      await authController.loginUsuario(email, password);
-      alert("Login realizado com sucesso!");
-    } catch (error) {
-      alert(`Erro ao realizar login: ${error.message}`);
-    }
-  });
-});
-
-const togglePassword = document.getElementById("mostrar-senha");
-const passwordInput = document.getElementById("password");
-
-togglePassword.addEventListener("click", function () {
-  const isPasswordVisible = passwordInput.type === "text";
-  passwordInput.type = isPasswordVisible ? "password" : "text";
-
-  this.textContent = isPasswordVisible ? "Mostrar" : "Esconder";
+  } catch (error) {
+    mostrarNotificacao(error.message || "Erro ao realizar login.", "erro");
+    console.error("Erro no login:", error);
+  }
 });
