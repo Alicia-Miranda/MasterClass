@@ -6,34 +6,11 @@
   <title>Perfil do Professor - Turmas</title>
   <link rel="stylesheet" href="../styles/turma.css">
 </head>
-
+  
 <body>
-  <header class="navbar">
-    <div class="navbar-logo">
-      <img src="../../assets/logo.png" alt="OnClass">
-      <span>Perfil do Professor</span>
-    </div>
-
-    <nav class="navbar-links">
-      <a href="./turma.html" class="active">Turmas</a>
-      <a href="./minhasAtividades.html">Minhas Atividades</a>
-    </nav>
-
-    <div class="navbar-user">
-      <button class="btn-sair">Sair</button>
-      <div class="user-info">
-        <span id="nome-do-professor">nome-do-professor</span>
-        <img src="#" alt="Foto do usuário">
-      </div>
-    </div>
-  </header>
+  <div id="header"></div>
 
   <main class="container">
-    <div class="sem-turma">
-      <img src="#" alt="Sem turmas">
-      <h3>Ainda não há turmas...</h3>
-    </div>
-    
     <button class="btn-criar-turma">Criar Turma +</button>
     <section class="popup-criar-turma" id="popup-overlay">
       <div class="popup">
@@ -50,19 +27,27 @@
       </div>
     </section>
 
-    <section class="turmas">
-      <div class="pesquisar-turma">
-        <input type="text" id="pesquisar-turma" placeholder="Pesquisar Turma">
-        <button id="btn-pesquisar"><i>🔍</i></button>
-      </div> 
+    <div class="sem-turma">
+      <img src="../../assets/sem turmas.png" alt="Sem turmas">
+      <h3>Ainda não há turmas...</h3>
+    </div>
 
+    <div class="pesquisar-turma">
+      <input type="text" id="pesquisar-turma" placeholder="Pesquisar Turma">
+      <button id="btn-pesquisar"><i>
+        <img src="../../assets/pesquidsr.png" alt="pesquisar">
+      </i></button>
+    </div> 
+
+    <section class="turmas">
       <section class="turmas-container" id="turmas-container">
         <!-- Turmas serão inseridas dinamicamente aqui -->
       </section>
     </section>
   </main>
 
-  <script type="module" src="js/turmas.js"></script>
+  <script src="js/header.js"></script>
+  <script type="module" src="./main.js"></script>
   <script type="module" src="../sign/logout.js"></script>
 </body>
 </html>

@@ -8,36 +8,20 @@
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="navbar-logo">
-          <img src="../../assets/logo.png" alt="OnClass Logo">
-          <span>Perfil do Professor</span>
-        </div>
-
-        <nav class="navbar-links">
-          <a href="./turma.html" class="active">Turmas</a>
-          <a href="./minhasAtividades.html">Minhas Atividades</a>
-        </nav>
-
-        <div class="navbar-user">
-          <button class="btn-sair">Sair</button>
-          <div class="user-info">
-            <span>nome-do-professor</span>
-            <img src="#" alt="Foto do usuário">
-          </div>
-        </div>
-    </header>
+  <div id="header"></div>
 
   <main class="container">
     <section class="sem-atividades">
-        <img src="#" alt="Sem atividades registradas">
+        <img src="../../assets/sem atividades.png" alt="Sem atividades registradas">
         <h3>Ainda não há atividades registradas...</h3>
     </section>
 
     <section class="atividades">
         <div class="pesquisar">
             <input type="text" id="pesquisar-atividade" placeholder="Pesquisar Atividade">
-            <button id="btn-pesquisar"><i>🔍</i></button>
+            <button id="btn-pesquisar"><i>
+              <img src="../../assets/pesquidsr.png" alt="pesquisar">
+            </i></button>
         </div>
         
         <section class="atividades-container" id="atividades-container">
@@ -46,6 +30,8 @@
     </section>
   </main>
 
-  <script src="js/buscarAtividade.js"></script>
+  <script src="js/header.js"></script>
+  <script type="module" src="js/atividades.js"></script>
+  <script type="module" src="../sign/logout.js"></script>
 </body>
 </html>
