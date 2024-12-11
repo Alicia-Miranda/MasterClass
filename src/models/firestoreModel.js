@@ -1,58 +1,78 @@
 import { db } from "./firebase.js";
-import { doc, setDoc, getDoc, getDocs, collection, deleteDoc } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+  deleteDoc,
+  addDoc,
+  updateDoc,
+} from "https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js";
 
 export const firestoreModel = {
-    criarUsuario: async (uid, nomeCompleto, email, tipoUsuario) => {
-        try {
-          const userDocRef = doc(db, "usuarios", uid);
-          await setDoc(userDocRef, {
-            nome: nomeCompleto,
-            email: email,
-            tipoUsuario: tipoUsuario , // Adiciona o tipo de usuário
-            criadoEm: new Date(),
-          });
-          console.log("Documento de usuário criado com sucesso.");
-        } catch (error) {
-          console.error("Erro ao criar documento de usuário:", error);
-          throw new Error(error.message || "Erro ao criar documento no Firestore.");
-        }
-      },
-      
-
-  buscarUsuario: async (uid) => {
+  setDocumento: async (collectionName, docId, data) => {
     try {
-      const userDocRef = doc(db, "usuarios", uid);
-      const userSnapshot = await getDoc(userDocRef);
-
-      if (userSnapshot.exists()) {
-        return userSnapshot.data();
-      } else {
-        throw new Error("Usuário não encontrado.");
-      }
+      const docRef = doc(db, collectionName, docId);
+      await setDoc(docRef, data);
+      return { id: docId, ...data };
     } catch (error) {
-      console.error("Erro ao buscar usuário:", error);
-      throw new Error(error.message || "Erro ao buscar documento no Firestore.");
+      console.error(`Erro ao definir documento na coleção ${collectionName}:`, error);
+      throw error;
     }
   },
 
-  listarUsuarios: async () => {
+  addDocumento: async (collectionName, data) => {
     try {
-      const querySnapshot = await getDocs(collection(db, "usuarios"));
+      const collectionRef = collection(db, collectionName);
+      const docRef = await addDoc(collectionRef, data);
+      return { id: docRef.id, ...data };
+    } catch (error) {
+      console.error(`Erro ao adicionar documento na coleção ${collectionName}:`, error);
+      throw error;
+    }
+  },
+
+  getDocumento: async (collectionName, docId) => {
+    try {
+      const docRef = doc(db, collectionName, docId);
+      const docSnapshot = await getDoc(docRef);
+      if (docSnapshot.exists()) return { id: docId, ...docSnapshot.data() };
+      throw new Error("Documento não encontrado.");
+    } catch (error) {
+      console.error(`Erro ao buscar documento na coleção ${collectionName}:`, error);
+      throw error;
+    }
+  },
+
+  getColecao: async (collectionName) => {
+    try {
+      const collectionRef = collection(db, collectionName);
+      const querySnapshot = await getDocs(collectionRef);
       return querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
     } catch (error) {
-      console.error("Erro ao listar usuários:", error);
-      throw new Error(error.message || "Erro ao listar documentos no Firestore.");
+      console.error(`Erro ao buscar coleção ${collectionName}:`, error);
+      throw error;
     }
   },
 
-  removerUsuario: async (uid) => {
+  deleteDocumento: async (collectionName, docId) => {
     try {
-      const userDocRef = doc(db, "usuarios", uid);
-      await deleteDoc(userDocRef);
-      console.log("Usuário removido com sucesso.");
+      const docRef = doc(db, collectionName, docId);
+      await deleteDoc(docRef);
     } catch (error) {
-      console.error("Erro ao remover usuário:", error);
-      throw new Error(error.message || "Erro ao remover documento no Firestore.");
+      console.error(`Erro ao deletar documento na coleção ${collectionName}:`, error);
+      throw error;
+    }
+  },
+
+  updateDocumento: async (collectionName, docId, data) => {
+    try {
+      const docRef = doc(db, collectionName, docId);
+      await updateDoc(docRef, data);
+    } catch (error) {
+      console.error(`Erro ao atualizar documento na coleção ${collectionName}:`, error);
+      throw error;
     }
   },
 };

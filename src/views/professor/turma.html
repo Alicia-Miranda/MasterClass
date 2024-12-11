@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil do Professor - Turmas</title>
-  <link rel="stylesheet" href="#">
+  <link rel="stylesheet" href="../styles/turma.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <div class="navbar-user">
       <button class="btn-sair">Sair</button>
       <div class="user-info">
-        <span>nome-do-professor</span>
+        <span id="nome-do-professor">nome-do-professor</span>
         <img src="#" alt="Foto do usuário">
       </div>
     </div>
@@ -34,8 +34,8 @@
       <h3>Ainda não há turmas...</h3>
     </div>
     
+    <button class="btn-criar-turma">Criar Turma +</button>
     <section class="popup-criar-turma" id="popup-overlay">
-      <button class="btn-criar-turma">Criar Turma +</button>
       <div class="popup">
         <button class="btn-fechar" id="btn-fechar">X</button>
         <h3>Criar Sala</h3>
@@ -62,7 +62,6 @@
     </section>
   </main>
 
-  <script src="js/criarTurma.js"></script>
-  <script src="js/turmas.js"></script>
+  <script type="module" src="js/turmas.js"></script>
 </body>
 </html>

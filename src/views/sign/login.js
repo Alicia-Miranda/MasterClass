@@ -1,5 +1,5 @@
 import { authModel } from "../../models/authModel.js";
-import { firestoreModel } from "../../models/firestoreModel.js";
+import { userController } from "../../controllers/userController.js";
 
 // Lidar com o botão de mostrar/esconder senha
 const btnMostrarSenha = document.getElementById("mostrar-senha");
@@ -14,12 +14,11 @@ btnMostrarSenha.addEventListener("click", () => {
 // Captura o formulário
 const form = document.getElementById("form-login");
 
+// Função para exibir notificações
 function mostrarNotificacao(mensagem, tipo = "sucesso") {
   const notificacao = document.getElementById("notificacao");
-
   notificacao.textContent = mensagem;
   notificacao.className = `notificacao ${tipo === "erro" ? "erro" : ""}`;
-
   notificacao.style.display = "block";
 
   setTimeout(() => {
@@ -27,6 +26,20 @@ function mostrarNotificacao(mensagem, tipo = "sucesso") {
   }, 4000);
 };
 
+// Função de login
+async function realizarLogin(email, password) {
+  try {
+    // Realiza login com o Firebase Authentication
+    const { user } = await authModel.login(email, password);
+    // Busca o tipo de usuário no Firestore utilizando o controller
+    const usuarioFirestore = await userController.buscarUsuario(user.uid); // Corrigido para usar userController
+    return usuarioFirestore;
+  } catch (error) {
+    throw new Error(error.message || "Erro ao realizar login.");
+  }
+}
+
+// Lógica do formulário de login
 form.addEventListener("submit", async (event) => {
   event.preventDefault(); // Evita o recarregamento da página
 
@@ -39,11 +52,7 @@ form.addEventListener("submit", async (event) => {
   }
 
   try {
-    // Realiza login com o Firebase Authentication
-    const { user } = await authModel.login(email, password);
-
-    // Busca o tipo de usuário no Firestore
-    const usuarioFirestore = await firestoreModel.buscarUsuario(user.uid);
+    const usuarioFirestore = await realizarLogin(email, password);
     const tipoUsuario = usuarioFirestore.tipoUsuario;
 
     if (!tipoUsuario) {
@@ -60,7 +69,7 @@ form.addEventListener("submit", async (event) => {
       mostrarNotificacao("Tipo de usuário inválido.", "erro");
     }
   } catch (error) {
-    mostrarNotificacao(error.message || "Erro ao realizar login.", "erro");
+    mostrarNotificacao(error.message, "erro");
     console.error("Erro no login:", error);
   }
 });
