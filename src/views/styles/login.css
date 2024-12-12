@@ -7,7 +7,7 @@
   
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f5f8fa; /* Fundo claro */
+  background-color: #f5f8fa;
   display: flex;
   height: 100vh; /* Faz o layout ocupar toda a altura da tela */
 }
@@ -21,7 +21,7 @@ body {
 /* Lado esquerdo: Fundo azul e bolinhas */
 .container-side {
   flex: 1; /* Ocupa 50% da largura */
-  background-color: #28587b; /* Azul escuro */
+  background-color: #28587b; 
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@ body {
 .container-side::before {
   width: 300px;
   height: 300px;
-  background-color: #f7e5e5; /* Rosa claro */
+  background-color: #f7e5e5; 
   bottom: -110px;
   left: -50px;
 }
@@ -53,15 +53,15 @@ body {
 .container-side::after {
   width: 80px;
   height: 80px;
-  background-color: #e4a5a5; /* Bege claro */
-  bottom: 400px; /* Posicionada acima da bola grande */
-  left: 100px; /* Ligeiramente deslocada à esquerda */
+  background-color: #e4a5a5; 
+  bottom: 350px; /* Posicionada acima da bola grande */
+  left: 70px; /* Ligeiramente deslocada à esquerda */
 }
 
 /* Lado direito: Formulário */
 .container-form {
   flex: 1; /* Ocupa 50% da largura */
-  background-color: #f5f8fa; /* Fundo claro */
+  background-color: #f5f8fa; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,7 +95,7 @@ body {
   width: 100%;
   padding: 0.8rem;
   margin-bottom: 15px;
-  background-color: #28587b; /* Azul escuro */
+  background-color: #28587b; 
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -105,7 +105,7 @@ body {
 }
 
 .container-form form button:hover {
-background-color: #1f4560; /* Azul mais escuro */
+background-color: #1f4560;
 }
 
 .bnt-voltar {
@@ -127,12 +127,12 @@ background-color: #1f4560; /* Azul mais escuro */
 }
 
 .container-form .esqueceu-senha {
-  color: #28587b; /* Azul escuro */
+  color: #28587b; 
 }
 
 .container-form .btn-sign {
   color: #ffffff;
-  background-color: #e4a5a5; /* Rosa claro */
+  background-color: #e4a5a5; 
   padding: 0.8rem;
   border-radius: 5px;
   font-size: 1rem;
@@ -140,5 +140,5 @@ background-color: #1f4560; /* Azul mais escuro */
 }
 
 .container-form .btn-sign:hover {
-  background-color: #d98c8c; /* Rosa mais escuro */
+  background-color: #d98c8c;
 }

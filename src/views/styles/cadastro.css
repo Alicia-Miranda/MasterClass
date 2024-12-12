@@ -54,8 +54,8 @@
     width: 80px;
     height: 80px;
     background-color: #e4a5a5; /* Bege claro */
-    bottom: 400px; /* Posicionada acima da bola grande */
-    left: 100px; /* Ligeiramente deslocada à esquerda */
+    bottom: 350px; /* Posicionada acima da bola grande */
+    left: 70px; /* Ligeiramente deslocada à esquerda */
   }
   
   /* Lado direito: Formulário */
