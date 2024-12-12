@@ -1,0 +1,340 @@
+<!-- nao implementado -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserir Data de Entrega</title>
+    <link rel="stylesheet" href="../styles/editarAtividade.css">
+    <link rel="stylesheet" href="../styles/header.css">
+
+    <style>
+        /* Estilos para o modal de anexar arquivo */
+        .modal-anexar-overlay {
+            display: none; /* Inicialmente oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-anexar {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            width: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos para o modal de alunos entregues */
+        .modal-alunos-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-alunos {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            width: 500px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos do modal de edição */
+        .modal-editar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-editar {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+            width: 500px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilos do botão de fechar */
+        .btn-close {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            color: #333;
+        }
+
+        /* Efeito de hover no botão "X" */
+        .btn-close:hover {
+            color: #f00;
+        }
+
+        .add-btn:hover, .btn-pronto:hover, .btn-close:hover {
+            background-color: #f0f0f0;
+            transition: background-color 0.3s ease;
+        }
+
+        .aluno {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .aluno p {
+            margin: 0;
+        }
+
+        .status {
+            font-weight: bold;
+        }
+
+        /* Estilos do botão de editar */
+        .btn-editar {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-editar:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos do botão de excluir */
+        .btn-excluir {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-excluir:hover {
+            background-color: #e53935;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+    
+    <div class="info-container">
+        <div class="sala">
+            <p> <- Disciplina: Língua Portuguesa</p>
+            <p>Professor(a): Rebeca Soares</p>
+            <p>Turma: 1 ano C</p>
+            <div class="detalhes">
+                <div class="data-entrega">
+                    <p>Data entrega:</p>
+                    <!-- Alterado para um campo de data -->
+                    <input type="date" id="data-entrega">
+                </div>
+            </div>
+            <div class="detalhes">
+                <div class="anexos">
+                    <p>Anexos</p>
+                    <!-- Botão para abrir o modal -->
+                    <button class="add-btn" onclick="abrirModal()">Anexar Arquivo</button>
+
+                    <!-- Modal de Anexos -->
+                    <div class="modal-anexar-overlay" id="modalAnexar">
+                        <div class="modal-anexar">
+                            <button class="btn-close" onclick="fecharModal()">×</button>
+                            <h2>Anexar Arquivo</h2>
+                            <input type="file" id="fileInput" onchange="mostrarArquivo()" />
+                            <p id="file-name">Nenhum arquivo selecionado</p>
+                            <button class="btn-pronto" onclick="fecharModal()">Pronto</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="detalhes">
+                <div class="atividades-entregues">
+                    <p>Atividades entregues</p>
+                    <button class="btn-pdf" onclick="mostrarAlunos()">Ver</button>
+                </div>
+            </div>
+        </div>
+        <div class="input-info">
+            <input type="text" id="titulo-atividade" placeholder="Título da atividade">
+            <textarea id="descricao-atividade" placeholder="Descrição da atividade"></textarea>
+            <div class="btn-container">
+                <button class="btn-enviar">Enviar atividade</button>
+                <button class="btn-editar" onclick="editarAtividade()">Editar Atividade</button>
+            </div>
+        </div>
+        
+
+
+    <!-- Modal de Exibição de Alunos -->
+    <div class="modal-alunos-overlay" id="modalAlunos">
+        <div class="modal-alunos">
+            <button class="btn-close" onclick="fecharAlunosModal()">×</button>
+            <h2>Alunos que Enviaram a Atividade</h2>
+            <div id="alunos-lista">
+                <!-- A lista de alunos será gerada aqui dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Edição de Atividade -->
+    <div class="modal-editar-overlay" id="modalEditar">
+        <div class="modal-editar">
+            <button class="btn-close" onclick="fecharEditarModal()">×</button>
+            <h2>Editar Atividade</h2>
+            <label for="editar-titulo">Título:</label>
+            <input type="text" id="editar-titulo" />
+            <label for="editar-descricao">Descrição:</label>
+            <textarea id="editar-descricao"></textarea>
+            <div>
+                <button class="btn-editar" onclick="salvarEdicao()">Salvar</button>
+                <button class="btn-excluir" onclick="excluirAtividade()">Excluir</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/header.js"></script>
+    <script type="module" src="../sign/logout.js"></script>
+
+    <script>
+        // Dados simulados da atividade
+        let atividade = {
+            titulo: 'Atividade de Língua Portuguesa',
+            descricao: 'Descreva um texto com 10 linhas.',
+        };
+
+        // Dados simulados dos alunos (para atividades entregues)
+        let alunos = [
+            { nome: 'João Silva', status: 'Entregou' },
+            { nome: 'Maria Oliveira', status: 'Não entregou' },
+            { nome: 'Pedro Souza', status: 'Entregou' }
+        ];
+
+        // Preencher os campos de atividade com os dados iniciais
+        document.getElementById('titulo-atividade').value = atividade.titulo;
+        document.getElementById('descricao-atividade').value = atividade.descricao;
+
+        // Função para abrir o modal de edição
+        function editarAtividade() {
+            // Preencher os campos do modal com os dados atuais
+            document.getElementById('editar-titulo').value = atividade.titulo;
+            document.getElementById('editar-descricao').value = atividade.descricao;
+
+            // Exibir o modal
+            document.getElementById('modalEditar').style.display = 'flex';
+        }
+
+        // Função para salvar as alterações da atividade
+        function salvarEdicao() {
+            // Atualizar a atividade com os novos dados
+            atividade.titulo = document.getElementById('editar-titulo').value;
+            atividade.descricao = document.getElementById('editar-descricao').value;
+
+            // Atualizar os campos na página principal
+            document.getElementById('titulo-atividade').value = atividade.titulo;
+            document.getElementById('descricao-atividade').value = atividade.descricao;
+
+            // Fechar o modal
+            fecharEditarModal();
+        }
+
+        // Função para excluir a atividade
+        function excluirAtividade() {
+            // Confirmação de exclusão (simulada)
+            if (confirm('Tem certeza de que deseja excluir esta atividade?')) {
+                // Limpar os dados da atividade
+                atividade = {
+                    titulo: '',
+                    descricao: '',
+                };
+
+                // Limpar os campos na página principal
+                document.getElementById('titulo-atividade').value = '';
+                document.getElementById('descricao-atividade').value = '';
+
+                // Fechar o modal
+                fecharEditarModal();
+            }
+        }
+
+        // Função para fechar o modal de edição
+        function fecharEditarModal() {
+            document.getElementById('modalEditar').style.display = 'none';
+        }
+
+        // Função para abrir o modal de anexar arquivo
+        function abrirModal() {
+            document.getElementById('modalAnexar').style.display = 'flex';
+        }
+
+        // Função para fechar o modal de anexar arquivo
+        function fecharModal() {
+            document.getElementById('modalAnexar').style.display = 'none';
+        }
+
+        // Função para abrir o modal de alunos entregues
+        function mostrarAlunos() {
+            // Atualizar o conteúdo da lista de alunos
+            const alunosLista = document.getElementById('alunos-lista');
+            alunosLista.innerHTML = ''; // Limpar conteúdo anterior
+
+            alunos.forEach(aluno => {
+                const alunoDiv = document.createElement('div');
+                alunoDiv.classList.add('aluno');
+                alunoDiv.innerHTML = `
+                    <p><strong>Nome:</strong> ${aluno.nome}</p>
+                    <p><span class="status">${aluno.status}</span></p>
+                `;
+                alunosLista.appendChild(alunoDiv);
+            });
+
+            // Exibir o modal
+            document.getElementById('modalAlunos').style.display = 'flex';
+        }
+
+        // Função para fechar o modal de alunos
+        function fecharAlunosModal() {
+            document.getElementById('modalAlunos').style.display = 'none';
+        }
+
+        // Mostrar o nome do arquivo anexado
+        function mostrarArquivo() {
+            const fileInput = document.getElementById('fileInput');
+            const fileName = document.getElementById('file-name');
+            if (fileInput.files.length > 0) {
+                fileName.textContent = `Arquivo selecionado: ${fileInput.files[0].name}`;
+            } else {
+                fileName.textContent = "Nenhum arquivo selecionado";
+            }
+        }
+    </script>
+</body>
+</html>

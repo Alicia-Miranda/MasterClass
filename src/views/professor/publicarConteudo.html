@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Conteúdo</title>
+    <link href="../styles/publicarConteudo.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="topo">
+            <div class="logo">
+                <img src="componentes/imgs/logo.png" alt="Logo OnClass">
+                <span>OnClass</span>
+                <span class="professor">Perfil do Professor</span>
+            </div>
+            <nav class="menu">
+                <a href="#" class="menu-item ativo">Turmas</a>
+                <a href="#" class="menu-item">Minhas Atividades</a>
+            </nav>
+            <div class="perfil">
+                <button class="sair">Sair</button>
+                <div class="usuario">
+                    <span>Rebeca</span>
+                    <img src="perfil.jpg" alt="Foto de perfil">
+                </div>
+            </div>
+        </header>
+
+        <!-- Corpo principal -->
+        <main class="conteudo">
+            <!-- Painel lateral -->
+            <aside class="painel-lateral">
+                <div class="info-disciplina">
+                    <p><strong>Disciplina:</strong> Língua Portuguesa</p>
+                    <p><strong>Professor(a):</strong> Rebeca Soares</p>
+                    <p><strong>Turma:</strong> 1 ano C</p>
+                </div>
+                <div class="anexos">
+                    <span>Anexos</span>
+                    <div class="arquivo">
+                        <img src="componentes/imgs/pdf-icon.png" alt="Ícone PDF">
+                        <span>exemplo.pdf</span>
+                        <button class="remover-arquivo">X</button>
+                    </div>
+                    <button class="adicionar-anexo">+</button>
+                </div>
+            </aside>
+
+            <!-- Área de conteúdo -->
+            <section class="principal">
+                <input type="text" class="titulo" placeholder="Título">
+                <textarea class="descricao" placeholder="Descrição..."></textarea>
+                <button class="enviar-conteudo">Enviar conteúdo</button>
+            </section>
+            <!-- Modal de Anexar Arquivo -->
+<div id="modal-anexar" class="modal hidden">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="modal-title">Anexar Arquivo</span>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="upload-area">
+                <input type="text" class="input-arquivo" placeholder="Escolha o arquivo">
+                <button class="btn-adicionar">+</button>
+            </div>
+            <div class="icons">
+                <img src="componentes/imgs/icone-alerta.png" alt="Ícone alerta">
+                <img src="componentes/imgs/icone-arquivo.png" alt="Ícone arquivo">
+            </div>
+            <button class="btn-pronto">Pronto</button>
+        </div>
+    </div>
+</div>
+        </main>
+        <script>
+            const modal = document.getElementById('modal-anexar');
+            const btnAbrir = document.querySelector('.adicionar-anexo');
+            const btnFechar = document.querySelector('.close-modal');
+        
+            btnAbrir.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+            });
+        
+            btnFechar.addEventListener('click', () => {
+                modal.classList.add('hidden');
+            });
+        </script>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+/* Cabeçalho */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7f9;
+}
+
+
+.header {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo img {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.header .user-info .btn {
+    background-color: #002244;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.header .user-info img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+/* Navegação */
+.nav {
+    background-color: #004488;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    color: white;
+    font-weight: bold;
+}
+
+.nav .nav-item {
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    background-color: #004c8c;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+.detalhes-botoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+    margin: 10px;
+}
+
+.botao-conteudo {
+    background-color: #DEDEDE;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top:20px;
+    cursor: pointer;
+}
+
+.botao-conteudo img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.botao-conteudo span {
+    font-weight: bold;
+}
+
+.conteudo-total {
+    display: flex;
+    
+    padding: 20px;
+    margin: 20px;
+}
+
+.detalhes{
+    
+    margin: 10px;
+}
+.informacoes-adicionais {
+    width: 25%;
+    border-radius: 8px;
+    padding: 15px;
+    margin-right: 20px;
+    
+}
+
+.informacoes-adicionais p {
+    margin-bottom: 10px;
+}
+.butoes-detalhes{
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.butoes-detalhes button {
+    background-color: #D3D3D3;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+
+.butoes-detalhes button:hover {
+    background-color: #003366;
+    
+}
+
+.atividade-entregues {
+    width: 75%;
+    border-radius: 8px;
+    padding: 20px;
+    
+}
+
+.titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.titulo h3 {
+    font-size: 18px;
+    color: #333;
+}
+
+.titulo p {
+    font-size: 14px;
+    color: #777;
+}
+
+.data-entrega {
+    margin: 20px 0;
+    
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.content-atividades-entregues {
+    margin-top: 20px;
+}
+.conteudo-atividade-aluno {
+    display: block;
+    align-items: center;
+    margin-bottom: 10px;
+    
+    flex: 80%;
+}
+.atividade-aluno {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    
+    
+}
+
+.atividade-aluno-img img{
+    width: 60px;
+    height: 60px;
+    flex: 10%;
+    border-radius: 50%;
+    margin-right: 10px;
+    
+}
+
+.atividade-aluno h5 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.atividade-aluno p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.atividade-aluno p:last-child {
+    color: #ff5757;
+    font-weight: bold;
+}

@@ -1,0 +1,287 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Cabeçalho */
+.topo {
+    background-color: #072944;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinha o logo, "OnClass" e "Perfil do Professor" na mesma linha */
+    gap: 10px; /* Espaçamento entre os itens */
+    position: absolute;
+    top: 20px; /* Ajuste a posição vertical */
+}
+
+.logo img {
+    width: 60px;
+    height: auto; /* Mantém a proporção do logo */
+}
+
+.logo span {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.logo span.professor {
+    font-size: 16px; /* Reduz o tamanho da fonte do "Perfil do Professor" */
+    color: rgb(159, 158, 158); /* Cor cinza clara */
+    margin-left: 10px; /* Pequeno espaçamento entre "OnClass" e "Perfil do Professor" */
+}
+
+.menu {
+    display: flex;    
+    justify-content: center;
+    margin-top: 25px;
+    gap: 300px;
+    row-gap: 300px;
+    column-gap: 300px;   
+}
+
+.menu-item {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    left: 500px;
+}
+
+.menu-item.ativo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sair {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: -100px; /* Espaçamento superior */
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -100px; /* Espaçamento superior */
+}
+
+.usuario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Conteúdo principal */
+.conteudo {
+    display: flex;
+    flex: 1;
+}
+
+.painel-lateral {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-disciplina {
+    margin-bottom: 20px;
+}
+
+.turma {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.editar-sala {
+    background-color: #adb5bd;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.acao-conteudos,
+.acao-atividades {
+    background-color: #e9ecef;
+    color: #495057;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.principal {
+    flex: 1;
+    padding: 20px;
+}
+
+.adicionar {
+    background-color: #adb5bd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-left: 960px;
+}
+
+.lista-conteudos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #023e8a;
+}
+
+.card .data {
+    margin: 5px 0;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.card .descricao {
+    margin: 10px 0;
+    color: #495057;
+    font-size: 16px;
+}
+
+.acoes-card {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.ver-conteudo,
+.anexos {
+    background-color: #adb5bd;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Detalhes do conteúdo */
+.conteudo-detalhe {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.voltar {
+    text-decoration: none;
+    color: #495057;
+    font-size: 20px;
+}
+
+.titulo-conteudo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #023e8a;
+}
+
+.horario {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.anexos {
+    margin-top: 20px;
+}
+
+.anexo {
+    background-color: #adb5bd;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.comentarios {
+    margin-top: 20px;
+}
+
+.comentario-novo {
+    display: flex;
+    gap: 10px;
+}
+
+.comentario {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.comentario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.conteudo-comentario p {
+    margin: 0;
+}

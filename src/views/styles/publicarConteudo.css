@@ -1,0 +1,272 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Cabeçalho */
+.topo {
+    background-color: #072944;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Alinha o logo, "OnClass" e "Perfil do Professor" na mesma linha */
+    gap: 10px; /* Espaçamento entre os itens */
+    position: absolute;
+    top: 20px; /* Ajuste a posição vertical */
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+.logo span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo .professor {
+    font-size: 16px;
+    color: rgb(159, 158, 158);
+}
+
+.menu {
+    display: flex;    
+    justify-content: center;
+    margin-top: 25px;
+    gap: 300px;
+    row-gap: 300px;
+    column-gap: 300px;  
+}
+
+.menu-item {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    left: 500px;
+}
+
+.menu-item.ativo::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -120px; /* Espaçamento superior */
+}
+
+.sair {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0px; /* Espaçamento superior */
+}
+
+.usuario img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  
+
+}
+
+/* Conteúdo principal */
+.conteudo {
+    display: flex;
+    flex: 1;
+}
+
+/* Painel lateral */
+.painel-lateral {
+    width: 300px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-disciplina {
+    margin-bottom: 20px;
+}
+
+.anexos {
+    margin-top: 20px;
+}
+
+.anexos .arquivo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.anexos .adicionar-anexo {
+    background-color: #adb5bd;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 265px;
+}
+
+/* Área de conteúdo */
+.principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.titulo, .descricao {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.descricao {
+    height: 200px;
+    resize: none;
+}
+
+.enviar-conteudo {
+    align-self: flex-end;
+    background-color: #adb5bd;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Estilo do Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #f6f6f6;
+    border-radius: 8px;
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.close-modal {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin-top: 20px;
+}
+
+.upload-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-arquivo {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-adicionar {
+    background-color: #adb5bd;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.icons img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-pronto {
+    background-color: #a8dadc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+

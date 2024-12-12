@@ -1,0 +1,650 @@
+
+  
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7f9;
+}
+.info-container {
+  
+  border-radius: 8px;
+  
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  font-family: monospace;
+  padding: 20px;
+  
+}
+
+.sala {
+  border-radius: 8px;
+  font-size: 15px;
+  
+  flex: 30%;
+  text-align: left; /* Alinha o texto à esquerda */
+  
+  padding: 15px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.input-info {
+  
+  border-radius: 8px;
+  background-color: #ffffff;
+  flex: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+.btn-pdf {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-pdf .remove {
+  color: red;
+  margin-left: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-pdf:hover {
+  background-color: #eaeaea;
+}
+
+.input-info input,
+.input-info textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input-info textarea {
+  height: 500px;
+  resize: none;
+}
+
+.btn-enviar {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  align-self: flex-end;
+}
+
+.btn-enviar:hover {
+  background-color: #0056b3;
+}
+
+.detalhes{
+  margin-top: 20px;
+  background-color: #e8e5e5;
+  border-radius: 8px;
+  padding: 8px;
+}
+.detalhes button{
+  width: 90%;
+  padding: 10px;
+  border-radius: 8px;
+  border: None;
+  font: bold;
+  cursor: pointer;
+  background-color: #bfbebe;
+}
+
+/* Container */
+.page-container {
+  width: 90%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  background-color: #003366;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.header .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.header .user-info .btn {
+  background-color: #002244;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.header .user-info img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+.btn-logout {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-logout:hover {
+  background-color: white;
+  color: #2d87f0;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+}
+
+.discipline-info p {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.activity-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activity-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.activity-form input {
+  padding: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: calc(100% - 35px);
+}
+
+.activity-form .btn-add {
+  background-color: #2d87f0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.attachments {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.file-item .btn-remove {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-submit {
+  background-color: #2d87f0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: #1a5fbf;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.modal h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #e74c3c;
+  cursor: pointer;
+}
+
+.calendar {
+  margin-top: 10px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.calendar-header .prev-month,
+.calendar-header .next-month {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-days div,
+.calendar-days button {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.calendar-days button {
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.calendar-days button:hover {
+  background-color: #ddd;
+}
+
+.calendar-days .selected {
+  background-color: #2d87f0;
+  color: white;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7f9;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: #003366;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo img {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.header .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.header .user-info .btn {
+  background-color: #002244;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.header .user-info img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+/* Navegação */
+.nav {
+  background-color: #003366;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0;
+  color: white;
+  font-weight: bold;
+}
+
+.nav .nav-item {
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+/* Conteúdo Principal */
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e8e8e8;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Área de Atividades */
+.content {
+  width: 50%;
+  border-radius: 10px;
+  
+  padding: 20px;
+}
+
+.add-btn {
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #004488;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.activity {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4);
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activity .info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  
+  margin: 10px;
+}
+
+.activity .info h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.activity .info p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  
+}
+
+.activity .actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px;
+}
+
+.activity .actions button {
+  padding: 5px 30px;
+  border: none;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: #e8e8e8;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+}
+.teste{
+  background-color: #e8e8e8;
+  
+}
+.pdata p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 100px;
+  font-weight: bold;
+}
+.atividade {
+  display: flex; /* Define um layout flexível */
+  justify-content: flex-end; /* Alinha o botão à direita */
+  margin: 20px; /* Adiciona um espaçamento externo */
+}
+.add-btn {
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background-color: #004488;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+#modal {
+  display: none; /* Garante que o modal não aparece ao carregar a página */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+/* Modal Overlay */
+.modal-anexar-overlay {
+display: none; /* Esconde o modal inicialmente */
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+justify-content: center;
+align-items: center;
+z-index: 1000; /* Garante que fica acima de outros elementos */
+}
+
+/* Modal Container */
+.modal-anexar {
+background: white;
+border-radius: 10px;
+width: 90%;
+max-width: 400px;
+padding: 20px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+position: relative;
+text-align: center;
+}
+
+/* Modal Header */
+.modal-anexar h2 {
+font-size: 1.5rem;
+margin-bottom: 20px;
+color: #333;
+}
+
+/* Botão Fechar Modal */
+.modal-anexar .btn-close {
+position: absolute;
+top: 10px;
+right: 10px;
+background: none;
+border: none;
+font-size: 1.2rem;
+color: #e74c3c;
+cursor: pointer;
+}
+
+/* Botão "Pronto" */
+.modal-anexar .btn-pronto {
+background-color: #007bff;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 1rem;
+cursor: pointer;
+margin-top: 20px;
+}
+
+.modal-anexar .btn-pronto:hover {
+background-color: #0056b3;
+}
+
+/* Input para anexos */
+.modal-anexar input[type="file"] {
+width: 100%;
+padding: 10px;
+font-size: 1rem;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-bottom: 20px;
+box-sizing: border-box;
+}
+/* Contêiner para os botões (Enviar e Editar) */
+.btn-container {
+display: flex;
+gap: 10px; /* Espaço entre os botões */
+margin-top: 10px;
+}
+
+/* Estilos do botão "Enviar atividade" */
+.btn-enviar {
+background-color: #0056b3;
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+flex: 1; /* Ocupa o espaço restante */
+}
+
+/* Estilos do botão "Editar Atividade" */
+.btn-editar {
+background-color: #0056b3;
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+flex: 1; /* Ocupa o espaço restante */
+}
+
+/* Efeito de hover no botão de editar */
+.btn-editar:hover {
+background-color: #014ea0;
+}
+
+/* Efeito de hover no botão de enviar */
+.btn-enviar:hover {
+background-color: #014ea0;
+}
+

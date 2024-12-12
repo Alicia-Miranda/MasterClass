@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Professor</title>
+    <link href="../styles/salaConteudo.css" rel="stylesheet">
+    <script>
+        // Funções para alternar entre lista de conteúdos e detalhes do conteúdo
+        function mostrarDetalhes(titulo) {
+            document.querySelector('.lista-conteudos').style.display = 'none';
+            document.querySelector('.conteudo-detalhe').style.display = 'block';
+            document.querySelector('.titulo-conteudo').textContent = titulo;
+        }
+
+        function voltarLista() {
+            document.querySelector('.conteudo-detalhe').style.display = 'none';
+            document.querySelector('.lista-conteudos').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="topo">
+            <div class="logo">
+                <img src="componentes/imgs/logo.png" alt="logo.oficial2">
+                <span>OnClass</span>
+                <span class="professor">Perfil do Professor</span>
+            </div>
+            <nav class="menu">
+                <a href="#" class="menu-item ativo">Turmas</a>
+                <a href="#" class="menu-item">Minhas Atividades</a>
+            </nav>
+            <div class="perfil">
+                <button class="sair">Sair</button>
+                <div class="usuario">
+                    <span>Rebeca</span>
+                    <img src="perfil.jpg" alt="Foto de perfil">
+                </div>
+            </div>
+        </header>
+
+        <main class="conteudo">
+            <aside class="painel-lateral">
+                <div class="info-disciplina">
+                    <p><strong>Disciplina:</strong> Língua Portuguesa</p>
+                    <p><strong>Professor(a):</strong> Rebeca Soares</p>
+                </div>
+                <div class="turma">
+                    <span>Turma: 1 ano C</span>
+                    <button class="editar-sala">Editar sala</button>
+                </div>
+                <div class="acoes">
+                    <button class="acao-conteudos">Conteúdos</button>
+                    <button class="acao-atividades">Atividades</button>
+                </div>
+            </aside>
+
+            <section class="principal">
+                <!-- Botão para adicionar conteúdo -->
+                <button class="adicionar">Adicionar conteúdo</button>
+                
+                <!-- Lista de conteúdos -->
+                <div class="lista-conteudos">
+                    <div class="card">
+                        <h3>Concordância</h3>
+                        <p class="data">Postado em 12/12/2024 - 13:10</p>
+                        <p class="descricao">É um conceito gramatical que se refere à harmonia entre as palavras de uma oração, ou seja, à relação entre os seus componentes...</p>
+                        <div class="acoes-card">
+                            <button class="ver-conteudo" onclick="mostrarDetalhes('Concordância')">Ver conteúdo</button>
+                            <button class="anexos">Anexos</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Figuras de Linguagem</h3>
+                        <p class="data">Postado em 10/09/2024 - 09:20</p>
+                        <p class="descricao">As figuras de linguagem são estratégias linguísticas que enriquecem a comunicação por meio de metáforas, hipérboles...</p>
+                        <div class="acoes-card">
+                            <button class="ver-conteudo" onclick="mostrarDetalhes('Figuras de Linguagem')">Ver conteúdo</button>
+                            <button class="anexos">Anexos</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Análise Sintática</h3>
+                        <p class="data">Postado em 07/08/2024 - 14:57</p>
+                        <p class="descricao">A análise sintática é o estudo das funções das palavras e suas relações dentro de uma oração...</p>
+                        <div class="acoes-card">
+                            <button class="ver-conteudo" onclick="mostrarDetalhes('Análise Sintática')">Ver conteúdo</button>
+                            <button class="anexos">Anexos</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detalhes do conteúdo (escondido por padrão) -->
+                <div class="conteudo-detalhe" style="display: none;" id="detalhe-conteudo">
+                    <div class="cabecalho">
+                        <a href="#" class="voltar" onclick="voltarLista()">&#8592;</a> <!-- Ícone de voltar -->
+                        <span class="titulo-conteudo">Título do Conteúdo</span>
+                        <span class="horario">10:54 – 12/12/2024</span>
+                    </div>
+                    <p class="descricao">
+                        A concordância, no contexto linguístico, refere-se à harmonia gramatical entre os elementos de uma oração. Essa relação ocorre principalmente entre o sujeito e o verbo (concordância verbal) ou entre os substantivos, adjetivos, artigos e pronomes (concordância nominal).
+                    </p>
+                    <div class="anexos">
+                        <button class="anexo">youtube: vídeo sobre aula</button>
+                        <button class="anexo">aula1-concordancia.pdf</button>
+                    </div>
+                    <div class="comentarios">
+                        <h3>Comentários</h3>
+                        <div class="comentario-novo">
+                            <input type="text" placeholder="Comentar..." />
+                            <button class="btn-enviar">&#9654;</button> <!-- Ícone de enviar -->
+                        </div>
+                        <div class="comentario">
+                            <img src="componentes/imgs/avatar-professora.png" alt="Rebeca">
+                            <div class="conteudo-comentario">
+                                <p><strong>Rebeca – Professor(a)</strong></p>
+                                <p>
+                                    Na concordância verbal, o verbo ajusta-se ao número (singular ou plural) e à pessoa gramatical do sujeito.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+
+
+
+
