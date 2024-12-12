@@ -5,11 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salas</title>
     <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/sala.css">
 </head>
 <body>
     <div id="header"></div>
 
+    <main>
+        <section class="class-info">
+          <p><strong>Disciplina:</strong> Língua Portuguesa</p>
+          <p><strong>Professor(a):</strong> Rebeca Soares</p>
+          <div class="buttons">
+            <button>Turma: 1 ano C</button>
+            <button class="editar-sala-btn" onclick="abrirModal()">Editar sala</button>
+          </div>
+         
+          <div class="actions">
+            <button>Conteúdos</button>
+            <button>Atividades</button>
+          </div>
+        </section>
+        <section class="empty-content">
+          <img src="../../assets/pasta2.jpg" alt="Ícone vazio">
+          <p>Sala de Aula sem conteúdo</p>
+        </section>
+    
+        <!-- Modal de "Editar Sala" -->
+        <div id="modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>Editar Sala</h2>
+              <button class="close-btn" onclick="fecharModal()">X</button>
+            </div>
+            <div class="modal-body">
+              <label for="nome-turma">Nome da Turma</label>
+              <input type="text" id="nome-turma" placeholder="Digite o nome da turma">
+              <label for="nome-disciplina">Nome da Disciplina</label>
+              <input type="text" id="nome-disciplina" placeholder="Digite o nome da disciplina">
+            </div>
+            <div class="modal-footer">
+              <button class="excluir-btn">Excluir Sala</button>
+              <button class="salvar-btn">Salvar</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
     <script src="js/header.js"></script>
     <script type="module" src="../sign/logout.js"></script>
+
+    <script>
+        function abrirModal() {
+          document.getElementById("modal").style.display = "flex";
+        }
+        function fecharModal() {
+          document.getElementById("modal").style.display = "none";
+        }
+      </script>
 </body>
 </html>

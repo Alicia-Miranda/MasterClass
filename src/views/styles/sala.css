@@ -1,0 +1,247 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que largura e altura incluam padding e border */
+  }
+  
+  /* Estilo geral do corpo */
+  body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    color: #333; /* Texto em cinza escuro */
+  }
+  
+  /* Estilos do cabeçalho (header) */
+  header {
+    background-color: #072944; /* Fundo azul escuro */
+    color: white; /* Texto branco */
+    padding: 10px 20px; /* Espaçamento interno (superior/inferior e laterais) */
+  }
+  
+  /* Contêiner principal no cabeçalho (logo, navegação e informações do usuário) */
+  .container {
+    display: flex; /* Cria layout em linha */
+    justify-content: space-between; /* Espaça os itens ao máximo */
+    align-items: center; /* Alinha verticalmente os itens */
+  }
+  
+  .logo {
+    display: flex; /* Mantém o layout em linha para o logo, "OnClass" e "Perfil do Professor" */
+    align-items: center; /* Alinha verticalmente todos os itens */
+    gap: 10px; /* Espaçamento entre os itens */
+  }
+  
+  .logo img {
+    height: 60px; /* Altura fixa para o logo */
+  }
+  
+  .logo span.professor {
+    font-size: 16px; /* Ajusta o tamanho da fonte para "Perfil do Professor" */
+    color: rgb(159, 158, 158); /* Mantém o texto branco */
+    margin-left: 10px; /* Ajusta a distância entre "OnClass" e "Perfil do Professor" */
+  }
+  
+  /* Navegação no cabeçalho */
+  nav ul {
+    list-style: none; /* Remove marcadores da lista */
+    display: flex; /* Exibe os itens em linha */
+    gap: 10px; /* Espaçamento entre os links */
+  }
+  
+  nav a {
+    color: white; /* Links na cor branca */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-weight: bold; /* Deixa o texto em negrito */
+  }
+  
+  /* Estilo das informações do usuário */
+  .user-info {
+    display: flex; /* Exibe o botão e a imagem do usuário em linha */
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Espaçamento entre os elementos */
+  }
+  
+  .user-avatar {
+    height: 40px; /* Define altura fixa para a imagem de perfil */
+    border-radius: 50%; /* Deixa a imagem circular */
+  }
+  
+  .btn-sair {
+    background-color: #003366; /* Fundo azul mais escuro */
+    color: white; /* Texto branco */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Deixa os cantos arredondados */
+    padding: 5px 10px; /* Define espaçamento interno */
+    cursor: pointer; /* Mostra o ícone de "clique" ao passar o mouse */
+  }
+  
+  /* Menu de navegação secundária */
+  .menu {
+    display: flex; /* Exibe os botões em linha */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 40px; /* Espaçamento superior */
+    gap: 300px; /* Espaçamento entre os botões */
+  }
+  
+  .menu-btn {
+    background-color: transparent; /* Remove cor de fundo */
+    color: white; /* Texto branco */
+    border: none; /* Remove bordas padrão */
+    border-bottom: 3px solid transparent; /* Cria borda inferior transparente */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Ícone de "clique" ao passar o mouse */
+    padding: 40px 20px; /* Espaçamento interno */
+  }
+  
+  .menu-btn:hover,
+  .menu-btn:focus {
+    border-bottom: 3px solid white; /* Adiciona destaque na borda inferior ao passar ou focar */
+  }
+  
+  /* Estilo principal do conteúdo */
+  main {
+    padding: 20px; /* Espaçamento interno geral */
+  }
+  
+  /* Informações da turma */
+  .class-info {
+    margin-bottom: 10px; /* Espaçamento inferior */
+  }
+  
+  .class-info p {
+    margin-bottom: 10px; /* Espaçamento entre as linhas de texto */
+  }
+  
+  /* Botões para ações de turma e edição */
+
+
+  .buttons,
+  .actions {
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 30px; /* Espaçamento superior */
+  }
+  
+  .buttons button,
+  .actions button {
+    padding: 10px 15px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: #f8f8f8; /* Fundo cinza claro */
+    cursor: pointer; /* Ícone de "clique" ao passar o mouse */
+  }
+  
+  /* Estilo adicional para botões "Conteúdos" e "Atividades" */
+  .actions button {
+    display: flex; /* Exibe ícone e texto em linha */
+    align-items: center; /* Alinha verticalmente */
+    gap: 5px; /* Espaçamento entre ícone e texto */
+  }
+  
+  /* Seção de conteúdo vazio */
+  .empty-content {
+    display: flex; /* Alinha itens verticalmente */
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    margin-top: 10px; /* Espaçamento superior */
+  }
+  
+  .empty-content img {
+    width: 150px; /* Define largura fixa do ícone */
+    opacity: 1.5; /* Deixa o ícone semitransparente */
+    margin-bottom: 10px; /* Espaçamento inferior do ícone */
+  }
+  
+  .empty-content p {
+    font-size: 19px; /* Tamanho da fonte */
+    color: #999; /* Texto cinza claro */
+  }
+  
+  /* Estilo do Modal */
+  .modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fixa na tela */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente escuro */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    z-index: 1000; /* Sobrepõe o conteúdo */
+  }
+
+
+  
+  .modal-content {
+    background-color: #fff; /* Fundo branco */
+    width: 90%; /* Largura padrão */
+    max-width: 400px; /* Largura máxima */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    overflow: hidden; /* Evita que o conteúdo ultrapasse */
+  }
+  
+  .modal-header {
+    background-color: #072944; /* Fundo azul escuro */
+    color: white; /* Texto branco */
+    padding: 10px 20px; /* Espaçamento interno */
+    display: flex; /* Exibe título e botão em linha */
+    justify-content: space-between; /* Espaço entre os itens */
+    align-items: center; /* Centraliza verticalmente */
+  }
+  
+  .modal-header h2 {
+    font-size: 18px; /* Tamanho do título */
+  }
+  
+  .close-btn {
+    background: none; /* Sem fundo */
+    border: none; /* Sem borda */
+    color: white; /* Cor branca */
+    font-size: 18px; /* Tamanho do texto */
+    cursor: pointer; /* Ícone de clique */
+  }
+  
+  .modal-body {
+    padding: 20px; /* Espaçamento interno */
+    display: flex;
+    flex-direction: column; /* Coloca os campos em coluna */
+    gap: 15px; /* Espaçamento entre os campos */
+  }
+  
+  .modal-body label {
+    font-weight: bold; /* Negrito para os rótulos */
+  }
+  
+  .modal-body input {
+    width: 100%; /* Ocupa toda a largura */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Cantos arredondados */
+  }
+  
+  .modal-footer {
+    padding: 10px 20px; /* Espaçamento interno */
+    display: flex; /* Exibe os botões em linha */
+    justify-content: space-between; /* Espaça os botões */
+  }
+  
+  .excluir-btn {
+    background-color: #ff4d4d; /* Vermelho */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .salvar-btn {
+    background-color: #4caf50; /* Verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
